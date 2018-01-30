@@ -6,7 +6,7 @@ import java.util.List;
  * Created by c4q on 1/28/18.
  */
 
-public class Period {
+public class Weather {
     public Integer timestamp;
     public String validTime;
     public String dateTimeISO;

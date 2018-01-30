@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import nyc.c4q.mustafizurmatin.weatherapp.R;
-import nyc.c4q.mustafizurmatin.weatherapp.model.Period;
+import nyc.c4q.mustafizurmatin.weatherapp.model.Weather;
 import nyc.c4q.mustafizurmatin.weatherapp.view.WeatherViewHolder;
 
 /**
@@ -17,9 +17,9 @@ import nyc.c4q.mustafizurmatin.weatherapp.view.WeatherViewHolder;
  */
 
 public class WeatherAdapter extends RecyclerView.Adapter<WeatherViewHolder> {
-    private List<Period> periodList = new ArrayList<>();
+    private List<Weather> periodList = new ArrayList<>();
 
-    public WeatherAdapter(List<Period> periodList) {
+    public WeatherAdapter(List<Weather> periodList) {
         this.periodList = periodList;
     }
 

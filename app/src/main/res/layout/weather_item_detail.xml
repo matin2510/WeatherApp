@@ -11,8 +11,7 @@
     <ImageView
         android:id="@+id/weather_imageview"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/am_pcloudy"/>
+        android:layout_height="wrap_content"/>
 
     <TextView
         android:id="@+id/temp_low_textview"

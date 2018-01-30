@@ -5,9 +5,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.time.Period;
-
 import nyc.c4q.mustafizurmatin.weatherapp.R;
+import nyc.c4q.mustafizurmatin.weatherapp.model.Weather;
 
 /**
  * Created by c4q on 1/28/18.
@@ -24,15 +23,15 @@ public class WeatherViewHolder extends RecyclerView.ViewHolder {
         highTemp = (TextView) itemView.findViewById(R.id.temp_high_textview);
         lowTemp = (TextView) itemView.findViewById(R.id.temp_low_textview);
     }
-    
 
-    public void onBind(nyc.c4q.mustafizurmatin.weatherapp.model.Period period) {
+
+    public void onBind(Weather period) {
         date.setText(period.dateTimeISO);
         highTemp.setText("High: " + period.maxTempC + " deg C");
         lowTemp.setText("Low: " + period.minTempC + " deg C");
-        final Period nuPeriod = period;
+        final Weather weather = period;
+
     }
 
-    public void onBind(Period period) {
-    }
+
 }
