@@ -6,7 +6,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import nyc.c4q.mustafizurmatin.weatherapp.R;
-import nyc.c4q.mustafizurmatin.weatherapp.model.Weather;
+import nyc.c4q.mustafizurmatin.weatherapp.model.WeatherResponse;
 
 /**
  * Created by c4q on 1/28/18.
@@ -25,13 +25,17 @@ public class WeatherViewHolder extends RecyclerView.ViewHolder {
     }
 
 
-    public void onBind(Weather period) {
-        date.setText(period.dateTimeISO);
-        highTemp.setText("High: " + period.maxTempC + " deg C");
-        lowTemp.setText("Low: " + period.minTempC + " deg C");
-        final Weather weather = period;
+    public void onBind(WeatherResponse weatherResponse) {
+        // date.setText(period.dateTimeISO);
+//        Log.d("OnBind", "~~~~~~~~~~~~~~~~`"+weatherResponse.getPeriod().get(0).getMaxTempC()+"~~~~~~~~~~~~~~~~~~~~~`");
+        try {
+            highTemp.setText("High: " + weatherResponse.getPeriods().get(0).getMaxTempC() + " deg C");
+            lowTemp.setText("Low: " + weatherResponse.getPeriods().get(0).getMinTempC() + " deg C");
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        // final WeatherResponse weather = period;
 
     }
-
-
 }

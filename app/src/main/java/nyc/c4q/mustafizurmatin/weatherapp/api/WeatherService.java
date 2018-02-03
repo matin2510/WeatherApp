@@ -9,9 +9,9 @@ import retrofit2.http.Query;
  * Created by c4q on 1/28/18.
  */
 
-public class WeatherService {
+public interface WeatherService {
     @GET("forecasts/11101")
-    Call<WeatherJson> getData(@Query("client_id") String clientID, @Query("client_secret") String clientSecret) {
-        return null;
+    Call<WeatherJson> getData(@Query("client_id") String clientID, @Query("client_secret") String clientSecret) ;
+
     }
-}
+

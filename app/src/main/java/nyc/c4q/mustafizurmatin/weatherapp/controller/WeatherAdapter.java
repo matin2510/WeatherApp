@@ -1,6 +1,7 @@
 package nyc.c4q.mustafizurmatin.weatherapp.controller;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import nyc.c4q.mustafizurmatin.weatherapp.R;
-import nyc.c4q.mustafizurmatin.weatherapp.model.Weather;
+import nyc.c4q.mustafizurmatin.weatherapp.model.WeatherResponse;
 import nyc.c4q.mustafizurmatin.weatherapp.view.WeatherViewHolder;
 
 /**
@@ -17,9 +18,9 @@ import nyc.c4q.mustafizurmatin.weatherapp.view.WeatherViewHolder;
  */
 
 public class WeatherAdapter extends RecyclerView.Adapter<WeatherViewHolder> {
-    private List<Weather> periodList = new ArrayList<>();
+    private List<WeatherResponse> periodList = new ArrayList<>();
 
-    public WeatherAdapter(List<Weather> periodList) {
+    public WeatherAdapter(List<WeatherResponse> periodList) {
         this.periodList = periodList;
     }
 
@@ -31,6 +32,7 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherViewHolder> {
 
     @Override
     public void onBindViewHolder(WeatherViewHolder holder, int position) {
+        Log.d("ViewHolderOnBind", "~~~~~~~~~"+periodList.size()+"~~~~~~~~~~~~");
         holder.onBind(periodList.get(position));
 
     }

@@ -5,6 +5,14 @@ package nyc.c4q.mustafizurmatin.weatherapp.model;
  */
 
 public class Loc {
-    public Double _long;
-    public Double lat;
+    private Double _long;
+    private Double lat;
+
+    public Double get_long() {
+        return _long;
+    }
+
+    public Double getLat() {
+        return lat;
+    }
 }
