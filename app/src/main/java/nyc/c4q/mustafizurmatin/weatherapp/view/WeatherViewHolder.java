@@ -22,6 +22,7 @@ public class WeatherViewHolder extends RecyclerView.ViewHolder {
         date = (TextView) itemView.findViewById(R.id.date_textview);
         highTemp = (TextView) itemView.findViewById(R.id.temp_high_textview);
         lowTemp = (TextView) itemView.findViewById(R.id.temp_low_textview);
+
     }
 
 
@@ -31,6 +32,7 @@ public class WeatherViewHolder extends RecyclerView.ViewHolder {
         try {
             highTemp.setText("High: " + weatherResponse.getPeriods().get(0).getMaxTempC() + " deg C");
             lowTemp.setText("Low: " + weatherResponse.getPeriods().get(0).getMinTempC() + " deg C");
+            date.setText("City: " + weatherResponse.getProfile().getTz());
 
         }catch (Exception e){
             e.printStackTrace();

@@ -7,11 +7,6 @@
     android:orientation="vertical"
     tools:context="nyc.c4q.mustafizurmatin.weatherapp.MainActivity">
 
-    <Button
-        android:id="@+id/temp_switch_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Show Farenheit" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/weather_recyclerview"
@@ -19,6 +14,8 @@
         android:layout_height="wrap_content">
 
     </android.support.v7.widget.RecyclerView>
+
+
 
 
 </LinearLayout>
